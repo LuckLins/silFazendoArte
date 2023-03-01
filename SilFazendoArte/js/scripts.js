@@ -15,11 +15,11 @@ for (var i = 0; i < clientes.length; i++) {
         if (isNaN(qtde)) {
                 clientes[i].querySelector(".qtde").textContent = "Qtde inválida";
                 console.log("A quantidade encomendada pelo(a) cliente " + clientes[i].querySelector(".nome").textContent + " é inválida");
-                clientes[i].querySelector(".qtde").parentElement.style.color = 'red';
+                clientes[i].style.backgroundColor = 'lightcoral';
                 if (isNaN(val)) {
                         clientes[i].querySelector(".unitario").textContent = "Unitário inválido";
                         console.log("O valor unitário do produto encomendado pelo(a) cliente " + clientes[i].querySelector(".nome").textContent + " é inválida");
-                        clientes[i].querySelector(".unitario").parentElement.style.color = 'red';
+                        clientes[i].style.backgroundColor = 'lightcoral';
 
                 } else {
                         clientes[i].querySelector(".unitario").textContent = parseFloat(val).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
@@ -28,7 +28,7 @@ for (var i = 0; i < clientes.length; i++) {
                 if (isNaN(val)) {
                         clientes[i].querySelector(".unitario").textContent = "Unitário inválido";
                         console.log("O valor unitário do produto encomendado pelo(a) cliente " + clientes[i].querySelector(".nome").textContent + " é inválida");
-                        clientes[i].querySelector(".unitario").parentElement.style.color = 'red';
+                        clientes[i].style.backgroundColor = 'lightcoral';
                 } else {
                         var total = val * qtde;
 
