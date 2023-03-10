@@ -59,3 +59,45 @@ h2 {
     font-weight: normal;
     font-size: 3em;
 }
+
+.erro{
+    background-color: lightcoral;
+}
+form{
+    width: 60%;
+    padding-bottom: 20px;
+}
+form label,form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+fieldset{
+    display: block;
+    padding-left: 5%;
+    margin-left: 10em;
+    margin-bottom: 2%;
+    border-style: unset;
+}
+.input-padrao{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 85%;
+}
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    color: aliceblue;
+    background: #004AAD;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: outset;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.bota{
+    padding-left: 5%;
+    margin-left: 10em;
+    margin-bottom: 2%; 
+}
