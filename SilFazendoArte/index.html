@@ -22,7 +22,7 @@
             <h2 class="titulo">Encomendas</h2>
         </div>
         <hr>
-        <table>
+        <table class="table">
             <tr class="t1">
                 <td>Nome</td>
                 <td>Produto</td>
@@ -32,28 +32,28 @@
             </tr>
             <tr class="cliente">
                 <td class="nome">Margarete</td>
-                <td>Jogo Americano(4 peças) - Rosa</td>
+                <td class="prod">Jogo Americano(4 peças) - Rosa</td>
                 <td class="qtde">a</td>
                 <td class="unitario">30</td>
                 <td class="total">0</td>
             </tr>
             <tr class="cliente">
                 <td class="nome">Cleide</td>
-                <td>Tapetes Cozinha(3 peças) - Azul</td>
+                <td class="prod">Tapetes Cozinha(3 peças) - Azul</td>
                 <td class="qtde">2</td>
                 <td class="unitario">50b</td>
                 <td class="total">0</td>
             </tr>
             <tr class="cliente">
                 <td class="nome">Angelo</td>
-                <td>Pulseira Cristal Colorida</td>
+                <td class="prod">Pulseira Cristal Colorida</td>
                 <td class="qtde">3a</td>
                 <td class="unitario">25b</td>
                 <td class="total">0</td>
             </tr>
             <tr class="cliente">
                 <td class="nome">Angelo</td>
-                <td>Pulseira Cristal Vermelha</td>
+                <td class="prod">Pulseira Cristal Vermelha</td>
                 <td class="qtde">1</td>
                 <td class="unitario">25</td>
                 <td class="total">0</td>
@@ -63,49 +63,51 @@
             <h2 class="titulo">Adicionar nova Encomenda</h2>
         </div>
         <hr>
-        <form name="frmContato" method="get" action="" target="">
+        <form id="form-adi" name="form-adi" method="get" action="" target="">
             <fieldset>
                 <label for="nome">Nome</label>
-                <input type="text" id="nome" name="" class="input-padrao" required
-                    placeholder="Digite o nome do(a) cliente">
+                <input type="text" id="nome" name="nome" class="input-padrao" required
+                    placeholder="Digite o nome do(a) cliente" value="">
 
                 <label for="qtdade">Qtde</label>
-                <input type="text" id="quant" name="" class="input-padrao" required
-                    placeholder="Digite a quantidade encomendada">
+                <input type="number" id="quant" name="quant" class="input-padrao" required
+                    placeholder="Digite a quantidade encomendada" value="">
 
 
                 <br>
                 <label for="Produ">Produto
-                    <select class="input-padrao">
+                    <select class="input-padrao" id="product">
                         <option>Selecione</option>
-                        <option>Jogo Americano (4 peças) - Rosa</option>
-                        <option>Jogo Americano (4 peças) - Amerelo</option>
-                        <option>Jogo Americano (4 peças) - Verde</option>
-                        <option>Jogo Americano (3 peças) - Azul</option>
-                        <option>Jogo Americano (3 peças) - Rosa</option>
-                        <option>Jogo Americano (3 peças) - Amarelo</option>
-                        <option>Jogo Americano (3 peças) - Vermelho</option>
-                        <option>Pulseira Cristal - Colorida</option>
-                        <option>Pulseira Cristal - Vermelha</option>
-                        <option>Pulseira Cristal - Rosa</option>
-                        <option>Pulseira Cristal - Lilás</option>
-                        <option>Pulseira Cristal - Preta</option>
+                        <option value="Jogo Americano (4 peças) - Rosa">Jogo Americano (4 peças) - Rosa</option>
+                        <option value="Jogo Americano (4 peças) - Amerelo">Jogo Americano (4 peças) - Amerelo</option>
+                        <option value="Jogo Americano (4 peças) - Verde">Jogo Americano (4 peças) - Verde</option>
+                        <option value="Jogo Americano (3 peças) - Azul">Jogo Americano (3 peças) - Azul</option>
+                        <option value="Jogo Americano (3 peças) - Rosa">Jogo Americano (3 peças) - Rosa</option>
+                        <option value="Jogo Americano (3 peças) - Amarelo">Jogo Americano (3 peças) - Amarelo</option>
+                        <option value="Jogo Americano (3 peças) - Vermelho">Jogo Americano (3 peças) - Vermelho</option>
+                        <option value="Pulseira Cristal - Colorida">Pulseira Cristal - Colorida</option>
+                        <option value="Pulseira Cristal - Vermelha">Pulseira Cristal - Vermelha</option>
+                        <option value="Pulseira Cristal - Rosa">Pulseira Cristal - Rosa</option>
+                        <option value="Pulseira Cristal - Lilás">Pulseira Cristal - Lilás</option>
+                        <option value="Pulseira Cristal - Preta">Pulseira Cristal - Preta</option>
                     </select>
                 </label>
                 <br>
 
                 <label for="valorUni">R$ Unitário</label>
-                <input type="text" id="Unit" name="" class="input-padrao" required
-                    placeholder="Digite o valor unitário do produto">
+                <input type="number" id="Unit" name="Unit" class="input-padrao" required
+                    placeholder="Digite o valor unitário do produto" value="">
             </fieldset>
             <div class="bota">
-                <input type="submit" value="Enviar" class="enviar">
+                <button class="addButton" id="addButton">Adicionar</button>
+                <!--<input type="submit" value="Enviar" class="enviar">-->
             </div>
 
         </form>
     </main>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/calcula-total.js"></script>
 </body>
 
 </html>
