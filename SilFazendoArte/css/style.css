@@ -101,3 +101,11 @@ fieldset{
     margin-left: 10em;
     margin-bottom: 2%; 
 }
+.lista-erro{
+    font-size: large;
+    margin-left: 12em;
+    margin-top: 0.5em;
+    position: relative;
+    padding: 20px;
+    color: red;
+}

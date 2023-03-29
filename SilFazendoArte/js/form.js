@@ -4,61 +4,82 @@ addButton.addEventListener('click', createNewRow);
 
 function createNewRow(event) {
         event.preventDefault();
-
         //Captura o formulario
         var form = document.querySelector("#form-adi");
-
-        console.log('Campo nome: ' + form.nome.value);
-        console.log('Campo quantidade: ' + form.quant.value);
-        console.log('Campo produto: ' + form.product.value);
-        console.log('Campo valor: ' + form.Unit.value);
-
         var tabel = document.querySelector(".table");
+        //Valida o formulario
+        var validacao = validaForm(obtemEncomenda(form))
+
+        if(validacao.length > 0){
+                exibeMensagemErro(validacao);
+                return;
+        }
 
         //Atribui a nova linha na tabela
         tabel.appendChild(criaLinha(obtemEncomenda(form)));
+        //limpa o formulario
+        form.reset();
 
+        
         estilizacao(tabel.lastChild);
 
 }
 
-function obtemEncomenda(form){
+function obtemEncomenda(form) {
         var encomenda = {
                 nome: form.nome.value,
                 produto: form.product.value,
                 qtde: form.quant.value,
                 unitario: form.Unit.value,
+                //unitario: formataValor(form.Unit.value),
+                total: calculaTotal(form.quant.value, form.Unit.value),
         }
 
         return encomenda;
 }
 
-function criaLinha(encomenda){
+function criaLinha(encomenda) {
         //Monta a nova linha da tabela
         var linha = document.createElement("tr");
 
-        //Monta e popula as novas colunas da tabela
-        var nomeCol = criaColuna(encomenda.nome, "nome");
-        var qtdeCol = criaColuna(encomenda.qtde, "qtde");
-        var prodCol = criaColuna(encomenda.produto, "prod");
-        var uniCol = criaColuna(encomenda.unitario, "unitario");
-        var totCol = criaColuna(0, "total");
-        
         //Atribui as colunas na nova linha
-        linha.appendChild(nomeCol);
-        linha.appendChild(prodCol);
-        linha.appendChild(qtdeCol);
-        linha.appendChild(uniCol);
-        linha.appendChild(totCol);
+        linha.appendChild(criaColuna(encomenda.nome, "nome"));
+        linha.appendChild(criaColuna(encomenda.produto, "prod"));
+        linha.appendChild(criaColuna(encomenda.qtde, "qtde"));
+        linha.appendChild(criaColuna(encomenda.unitario, "unitario"));
+        linha.appendChild(criaColuna(encomenda.total, "total"));
 
         return linha;
 
 }
 
-function criaColuna(dados, classe){
+function criaColuna(dados, classe) {
         var td = document.createElement("td");
         td.textContent = dados;
         td.classList.add(classe);
 
         return td;
+}
+
+function validaForm(encomenda) {
+        var erros = [];
+
+        if (!validaQtde(encomenda.qtde)) {
+                erros.push("A quantidade é inválida");
+        }
+        if(!validaUnitario(encomenda.unitario)){
+                erros.push("O valor unitário é inválido")
+        }
+        
+        return erros;
+}
+
+function exibeMensagemErro(erros){
+        var ul = document.querySelector("#mensagens-erro")
+
+        erros.forEach(function(erro){
+                var li = document.createElement("li");
+                li.textContent = erro;
+                ul.appendChild(li);
+        });
 }
