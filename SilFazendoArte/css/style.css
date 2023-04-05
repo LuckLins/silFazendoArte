@@ -106,6 +106,11 @@ fieldset{
     margin-left: 12em;
     margin-top: 0.5em;
     position: relative;
-    padding: 20px;
+    /*padding: 20px;*/
     color: red;
+}
+
+.fadeOut{
+    opacity: 0;
+    transition: 1s;
 }
