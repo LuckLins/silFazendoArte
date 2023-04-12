@@ -6,7 +6,7 @@ function createNewRow(event) {
         event.preventDefault();
         //Captura o formulario
         var form = document.querySelector("#form-adi");
-        var tabel = document.querySelector(".table");
+        var tabel = document.querySelector("tbody");
 
         //Valida o formulario
         var validacao = validaForm(obtemEncomenda(form))
@@ -25,8 +25,6 @@ function createNewRow(event) {
         //limpa o formulario
         form.reset();
 
-        
-        //estilizacao(tabel.lastChild);
 
 }
 

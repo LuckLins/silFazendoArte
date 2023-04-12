@@ -22,47 +22,51 @@
             <h2 class="titulo">Encomendas</h2>
         </div>
         <hr>
-        <table class="table">
-            <thead>
-            <tr class="t1">
-                <td>Nome</td>
-                <td>Produto</td>
-                <td>Quantidade</td>
-                <td>Valor Unitário</td>
-                <td>Total</td>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="cliente">
-                <td class="nome">Margarete</td>
-                <td class="prod">Jogo Americano(4 peças) - Rosa</td>
-                <td class="qtde">a</td>
-                <td class="unitario">30</td>
-                <td class="total">0</td>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Cleide</td>
-                <td class="prod">Tapetes Cozinha(3 peças) - Azul</td>
-                <td class="qtde">2</td>
-                <td class="unitario">50b</td>
-                <td class="total">0</td>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Angelo</td>
-                <td class="prod">Pulseira Cristal Colorida</td>
-                <td class="qtde">3a</td>
-                <td class="unitario">25b</td>
-                <td class="total">0</td>
-            </tr>
-            <tr class="cliente">
-                <td class="nome">Angelo</td>
-                <td class="prod">Pulseira Cristal Vermelha</td>
-                <td class="qtde">1</td>
-                <td class="unitario">25</td>
-                <td class="total">0</td>
-            </tr>
-        </tbody>
-        </table>
+        <section class="tabela">
+            <label for="filtrar-tabela" class="filtra-tabela-la">Filtrar:</label>
+            <input type="text" id="filtrar-tabela" placeholder="Digite o cliente para pesquisar" class="filtrar-tabela">
+            <table class="table">
+                <thead>
+                    <tr class="t1">
+                        <td>Nome</td>
+                        <td>Produto</td>
+                        <td>Quantidade</td>
+                        <td>Valor Unitário</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cliente">
+                        <td class="nome">Margarete</td>
+                        <td class="prod">Jogo Americano(4 peças) - Rosa</td>
+                        <td class="qtde">a</td>
+                        <td class="unitario">30</td>
+                        <td class="total">0</td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Cleide</td>
+                        <td class="prod">Tapetes Cozinha(3 peças) - Azul</td>
+                        <td class="qtde">2</td>
+                        <td class="unitario">50b</td>
+                        <td class="total">0</td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Angelo</td>
+                        <td class="prod">Pulseira Cristal Colorida</td>
+                        <td class="qtde">3a</td>
+                        <td class="unitario">25b</td>
+                        <td class="total">0</td>
+                    </tr>
+                    <tr class="cliente">
+                        <td class="nome">Angelo</td>
+                        <td class="prod">Pulseira Cristal Vermelha</td>
+                        <td class="qtde">1</td>
+                        <td class="unitario">25</td>
+                        <td class="total">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         <div class="Enc">
             <h2 class="titulo">Adicionar nova Encomenda</h2>
         </div>
@@ -75,10 +79,8 @@
                     placeholder="Digite o nome do(a) cliente" value="">
 
                 <label for="qtdade">Qtde</label>
-                <input type="text" id="quant" name="quant" class="input-padrao" required
+                <input type="number" id="quant" name="quant" class="input-padrao" required
                     placeholder="Digite a quantidade encomendada" value="">
-
-
                 <br>
                 <label for="Produ">Produto
                     <select class="input-padrao" id="product">
@@ -114,6 +116,7 @@
     <script src="js/form.js"></script>
     <script src="js/calcula-total.js"></script>
     <script src="js/remover-encomenda.js"></script>
+    <script src="js/filtra.js"></script>
 </body>
 
 </html>

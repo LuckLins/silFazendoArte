@@ -18,7 +18,9 @@ table {
     margin: auto;
     line-height: 400%;
 }
-
+.tabela{
+    margin: auto;
+}
 .logo_box {
     width: 940px;
     position: left;
@@ -113,4 +115,18 @@ fieldset{
 .fadeOut{
     opacity: 0;
     transition: 1s;
+}
+
+#filtrar-tabela{
+    width: 20%;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+.filtra-tabela-la{
+    margin-left: 12em;
+}
+
+.invisivel{
+    display: none;
 }
