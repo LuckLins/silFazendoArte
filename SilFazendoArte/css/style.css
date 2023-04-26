@@ -9,6 +9,69 @@ body {
 header {
     background-color: #c910d6;
     padding: 20px 0;
+    display: flex;
+}
+
+.nav-button {
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #c910d6;
+    margin: 0;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.nav-button i {
+    color: #FFFFFF;
+}
+
+.overLay {
+    width: 0%;
+    height: 100%;
+    background-color: rgba(224, 177, 249, 0.9);
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+.overLay-content {
+    position: relative;
+    top:25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overLay a{
+    padding: 8px;
+    text-decoration: none;
+    color: purple;
+    font-size: 30px;
+    display: block;
+    transition:0.3s;
+}
+
+.overLay a:hover, .overLay a:focus{
+    color: yellow;
+}
+
+.overLay .closeBtn{
+    position: absolute;
+    font-size:60px;
+}
+
+.logo_box {
+    width: 90%;
+    position: left;
+    margin-left: 50px;
+}
+
+.logo {
+    width: 10%;
 }
 
 table {
@@ -18,17 +81,9 @@ table {
     margin: auto;
     line-height: 400%;
 }
-.tabela{
-    margin: auto;
-}
-.logo_box {
-    width: 940px;
-    position: left;
-    margin-left: 50px;
-}
 
-.logo {
-    width: 15%;
+.tabela {
+    margin: auto;
 }
 
 .Enc {
@@ -62,48 +117,56 @@ h2 {
     font-size: 3em;
 }
 
-.erro{
+.erro {
     background-color: lightcoral;
 }
-form{
+
+form {
     width: 60%;
     padding-bottom: 20px;
 }
-form label,form legend{
+
+form label,
+form legend {
     display: block;
     font-size: 20px;
     margin: 0 0 10px;
 }
-fieldset{
+
+fieldset {
     display: block;
     padding-left: 5%;
     margin-left: 10em;
     margin-bottom: 2%;
     border-style: unset;
 }
-.input-padrao{
+
+.input-padrao {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;
     width: 85%;
 }
-.addButton{
+
+.addButton {
     width: 40%;
     padding: 15px 0;
     color: aliceblue;
-    background: #004AAD;
+    background: #c910d6;
     font-weight: bold;
     font-size: 1.5em;
     border: outset;
     border-radius: 5px;
     cursor: pointer;
 }
-.bota{
+
+.bota {
     padding-left: 5%;
     margin-left: 10em;
-    margin-bottom: 2%; 
+    margin-bottom: 2%;
 }
-.lista-erro{
+
+.lista-erro {
     font-size: large;
     margin-left: 12em;
     margin-top: 0.5em;
@@ -112,21 +175,35 @@ fieldset{
     color: red;
 }
 
-.fadeOut{
+.fadeOut {
     opacity: 0;
     transition: 1s;
 }
 
-#filtrar-tabela{
+#filtrar-tabela {
     width: 20%;
     height: 35px;
     margin-bottom: 10px;
 }
 
-.filtra-tabela-la{
+.filtra-tabela-la {
     margin-left: 12em;
 }
 
-.invisivel{
+.invisivel {
     display: none;
+}
+
+.procurar {
+    width: 20%;
+    padding: 5px 0;
+    margin-left: 7.8em;
+    margin-top: 5px;
+    color: aliceblue;
+    background: #c910d6;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -11,17 +11,17 @@ campoFiltro.addEventListener("input", function () {
             var nome = tdNome.textContent;
             var expressao = new RegExp(this.value.toLowerCase(), "i");
             
-            //if (!expressao.test(nome)) {
-             //   console.log(this.value)
-             //   cliente.classList.add('invisivel');
-           // } else {
-            //    cliente.classList.remove('invisivel');
-           // }
-
-            if(nome.substring(0,this.value.length) != this.value){
-                console.log()
+            if (!expressao.test(nome)) {
+                console.log(this.value)
                 cliente.classList.add('invisivel');
+            } else {
+                cliente.classList.remove('invisivel');
             }
+
+            //if(nome.substring(0,this.value.length) != this.value){
+           //     console.log()
+            //    cliente.classList.add('invisivel');
+           // }
 
         }
     } else {
