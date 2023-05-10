@@ -17,7 +17,7 @@ campoFiltro.addEventListener("input", function () {
             } else {
                 cliente.classList.remove('invisivel');
             }
-
+            
             //if(nome.substring(0,this.value.length) != this.value){
            //     console.log()
             //    cliente.classList.add('invisivel');
